@@ -3937,6 +3937,86 @@
             "section": "influxdb",
             "order": 8
         },
+        "influxdb2.enable": {
+            "default": false,
+            "type": "boolean",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 0
+        },
+        "influxdb2.host": {
+            "default": "127.0.0.1",
+            "type": "text",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 2,
+            "validate": {
+                "value": "ip_or_hostname"
+            }
+        },
+        "influxdb2.port": {
+            "default": 8086,
+            "type": "integer",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 3
+        },
+        "influxdb2.org": {
+            "default": "librenms",
+            "type": "text",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 5
+        },
+        "influxdb2.bucket": {
+            "default": "librenms",
+            "type": "text",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 6
+        },
+        "influxdb2.token": {
+            "default": "",
+            "type": "text",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 7
+        },
+        "influxdb2.timeout": {
+            "default": 0,
+            "type": "integer",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 8
+        },
+        "influxdb2.verifySSL": {
+            "default": true,
+            "type": "boolean",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 9
+        },
+        "influxdb2.allowed_measurements": {
+            "default": "",
+            "type": "text",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 10
+        },
+        "influxdb2.allowed_fields": {
+            "default": "",
+            "type": "text",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 11
+        },
+        "influxdb2.allowed_tags": {
+            "default": "",
+            "type": "text",
+            "group": "poller",
+            "section": "influxdb2",
+            "order": 12
+        },
         "install_dir": {
             "type": "directory"
         },

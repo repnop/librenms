@@ -44,6 +44,7 @@ class Datastore
         $opts = [
             'r' => 'rrd.enable',
             'f' => 'influxdb.enable',
+            'x' => 'influxdb2.enable',
             'p' => 'prometheus.enable',
             'g' => 'graphite.enable',
         ];

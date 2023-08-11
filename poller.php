@@ -38,7 +38,7 @@ $poller_start = microtime(true);
 Log::setDefaultDriver('console');
 echo Config::get('project_name') . " Poller\n";
 
-$options = getopt('h:m:i:n:r::d::v::a::f::q');
+$options = getopt('h:m:i:n:r::d::v::a::f::x::q');
 
 if (isset($options['h'])) {
     if ($options['h'] == 'odd') {
@@ -89,6 +89,7 @@ if (empty($where)) {
     echo "Debugging and testing options:\n";
     echo "-r                 Do not create or update RRDs\n";
     echo "-f                 Do not insert data into InfluxDB\n";
+    echo "-x                 Do not insert data into InfluxDB2\n";
     echo "-p                 Do not insert data into Prometheus\n";
     echo "-d                 Enable debugging output\n";
     echo "-v                 Enable verbose debugging output\n";

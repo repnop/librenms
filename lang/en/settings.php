@@ -59,6 +59,7 @@ return [
             'distributed' => ['name' => 'Distributed Poller'],
             'graphite' => ['name' => 'Datastore: Graphite'],
             'influxdb' => ['name' => 'Datastore: InfluxDB'],
+            'influxdb2' => ['name' => 'Datastore: InfluxDB2'],
             'opentsdb' => ['name' => 'Datastore: OpenTSDB'],
             'ping' => ['name' => 'Ping'],
             'prometheus' => ['name' => 'Datastore: Prometheus'],
@@ -895,6 +896,52 @@ return [
             'verifySSL' => [
                 'description' => 'Verify SSL',
                 'help' => 'Verify the SSL certificate is valid and trusted',
+            ],
+        ],
+        'influxdb2' => [
+            'bucket' => [
+                'description' => 'Bucket',
+                'help' => 'Name of the InfluxDB bucket',
+            ],
+            'org' => [
+                'description' => 'Org',
+                'help' => 'Name of the InfluxDB org',
+            ],
+            'enable' => [
+                'description' => 'Enable',
+                'help' => 'Exports metrics to InfluxDB',
+            ],
+            'host' => [
+                'description' => 'Server',
+                'help' => 'The IP or hostname of the InfluxDB server to send data to',
+            ],
+            'port' => [
+                'description' => 'Port',
+                'help' => 'The port to use to connect to the InfluxDB server',
+            ],
+            'token' => [
+                'description' => 'API Token',
+                'help' => 'The API token to use for publishing data',
+            ],
+            'timeout' => [
+                'description' => 'Timeout',
+                'help' => 'How long to wait for InfluxDB server, 0 means default timeout',
+            ],
+            'verifySSL' => [
+                'description' => 'Verify SSL',
+                'help' => 'Verify the SSL certificate is valid and trusted',
+            ],
+            'allowed_measurements' => [
+                'description' => 'Allowed Measurements',
+                'help' => 'Comma separated list of allowed measurement names, no filtering is done if the list is empty',
+            ],
+            'allowed_fields' => [
+                'description' => 'Allowed Field Keys',
+                'help' => 'Comma separated list of allowed field keys (case insensitive), no filtering is done if the list is empty',
+            ],
+            'allowed_tags' => [
+                'description' => 'Allowed Tag Keys',
+                'help' => 'Comma separated list of allowed tag keys (case insensitive), no filtering is done if the list is empty',
             ],
         ],
         'ipmitool' => [
